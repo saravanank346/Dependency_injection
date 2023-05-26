@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NewCompComponent } from './new-comp/new-comp.component';
+import { ServiceService } from './service.service';
+import { NewComp2Component } from './new-comp2/new-comp2.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SerService } from './ser.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewCompComponent,
+    NewComp2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService,SerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
